@@ -137,7 +137,7 @@ public final class BroBot {
             for (final Task task : taskList) {
                 System.out.println(task);
             }
-            //Comment
+
             BroBot.delimit();
             return true;
         }
