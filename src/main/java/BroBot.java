@@ -132,7 +132,6 @@ public final class BroBot {
             }
         }
 
-        //comment
         if (command.equals("list")) {
             BroBot.delimit();
             for (final Task task : taskList) {
