@@ -1,4 +1,4 @@
-# BroBot User Guide
+# BroBotMain.BroBot User Guide
 
 // Update the title above to match the actual product name
 
