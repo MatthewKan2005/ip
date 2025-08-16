@@ -1,4 +1,4 @@
-package TaskMain;
+package brobot.task;
 
 import java.util.function.BiFunction;
 

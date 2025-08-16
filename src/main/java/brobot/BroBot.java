@@ -1,6 +1,6 @@
-package BroBotMain;
+package brobot;
 
-import TaskMain.Task;
+import brobot.task.Task;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,11 +8,11 @@ import java.util.regex.Pattern;
 
 // Finished Level-0, Level-1, Level-2 and Level-3.
 public final class BroBot {
-    private BroBot() {
+    /* private brobot.BroBot() {
 
-    }
+    } */
 
-    public static final String chatBotName = "BroBot";
+    public static final String chatBotName = "brobot.BroBot";
     private static final ArrayList<Task> taskList = new ArrayList<>();
 
     private static void greet() {
@@ -107,7 +107,7 @@ public final class BroBot {
             BroBot.taskList.add(Task.createTask(commandTokens));
 
             System.out.println("Got it. I've added this task:");
-            System.out.println("\t" + BroBot.taskList.getLast());
+            System.out.println("\t" + BroBot.taskList.get(BroBot.taskList.size() - 1));
             System.out.printf("Now you have %d tasks in the list.\n", BroBot.taskList.size());
 
             BroBot.delimit();
