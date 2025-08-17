@@ -8,13 +8,14 @@ import java.util.regex.Pattern;
 
 // Finished Level-0 to Level-4, as well as A-TextUiTesting.
 public final class BroBot {
-    /* private brobot.BroBot() {
+    /* private BroBot() {
 
     } */
 
-    public static final String chatBotName = "brobot.BroBot";
+    public static final String chatBotName = "BroBot";
     private static final ArrayList<Task> taskList = new ArrayList<>();
-
+    private static final String fourSpacesIndent = String.valueOf(new char[]{' ', ' ', ' ', ' '});
+    
     private static void greet() {
         BroBot.delimit();
         System.out.printf("Hello, I'm %s! What can I do for you?\n", BroBot.chatBotName);
@@ -58,7 +59,7 @@ public final class BroBot {
 
                     BroBot.taskList.get(taskIndex).mark();
                     System.out.println("Nice! I've marked this task as done:");
-                    System.out.println("\t" + BroBot.taskList.get(taskIndex));
+                    System.out.println(BroBot.fourSpacesIndent + BroBot.taskList.get(taskIndex));
 
                     BroBot.delimit();
                     return true;
@@ -83,7 +84,7 @@ public final class BroBot {
 
                     BroBot.taskList.get(taskIndex).unmark();
                     System.out.println("OK, I've marked this task as not done yet:");
-                    System.out.println("\t" + BroBot.taskList.get(taskIndex));
+                    System.out.println(BroBot.fourSpacesIndent + BroBot.taskList.get(taskIndex));
 
                     BroBot.delimit();
 
@@ -107,7 +108,7 @@ public final class BroBot {
             BroBot.taskList.add(Task.createTask(commandTokens));
 
             System.out.println("Got it. I've added this task:");
-            System.out.println("\t" + BroBot.taskList.get(BroBot.taskList.size() - 1));
+            System.out.println(BroBot.fourSpacesIndent + BroBot.taskList.get(BroBot.taskList.size() - 1));
             System.out.printf("Now you have %d tasks in the list.\n", BroBot.taskList.size());
 
             BroBot.delimit();
